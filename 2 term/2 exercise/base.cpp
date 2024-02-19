@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+
 using namespace std;
 
 void createArray(int* arr, int size){
@@ -31,14 +30,15 @@ int main() {
     int randomArray[arrSize];
 
     srand(time(nullptr)); 
-
+    
     int* ref = randomArray;
 
+    createArray(ref, arrSize);
+    
     cout << "index 3 of Arr: " << *(ref + 3) << endl;
 
     cout << "Random Array: ";
 
-    createArray(ref, arrSize);
     alertArray(ref, arrSize);
     printEvenNumbers(ref, arrSize);
 
